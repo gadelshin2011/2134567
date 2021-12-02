@@ -5,10 +5,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.viewModels
+import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
 import com.example.application.databinding.FragmentRegistrationBinding
 
 class RegistrationFragment : Fragment() {
    lateinit var binding: FragmentRegistrationBinding
+    private val dataModel: DataModel by activityViewModels()
+
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -19,11 +26,21 @@ class RegistrationFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.btnRegistrationUser.setOnClickListener {
+            dataModel.messageLogin.value = binding.twLoginRegistration.text.toString()
+            dataModel.messagePassword.value = binding.twPasswordRegistration.text.toString()
+        }
+
+
     }
 
     companion object {
         @JvmStatic
         fun newInstance() = RegistrationFragment()
+         }
 
-            }
+
+
+
+
     }

@@ -38,7 +38,7 @@
                 android:layout_marginBottom="20dp"/>
 
             <Button
-                android:id="@+id/bnAuthorization"
+                android:id="@+id/btnRegistrationUser"
                 android:layout_width="@dimen/widthButton"
                 android:layout_height="@dimen/heightButton"
                 android:text="@string/registration" />
