@@ -27,10 +27,17 @@ class RegistrationFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnRegistrationUser.setOnClickListener {
+            openAuthorizationFragment()
             dataModel.messageLogin.value = binding.twLoginRegistration.text.toString()
             dataModel.messagePassword.value = binding.twPasswordRegistration.text.toString()
+
         }
 
+    }
+    private fun openAuthorizationFragment(){
+        parentFragmentManager.beginTransaction()
+            .replace(R.id.Fragment_Constraint,AuthorizationFragment.newInstance())
+            .commit()
 
     }
 

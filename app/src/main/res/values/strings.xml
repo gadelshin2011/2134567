@@ -4,4 +4,9 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="authorization">Авторизоваться</string>
     <string name="registration">Регистрация</string>
+
+    <string name="login">admin</string>
+    <string name="password">admin</string>
+    <string name="errorInfo">Пожалуйста проверьте данные или зарегистрируйтесь</string>
+
 </resources>
