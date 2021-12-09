@@ -21,6 +21,7 @@ class AuthorizationFragment : Fragment() {
     private lateinit var UserLogin: String
     private lateinit var UserPassword: String
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -32,6 +33,7 @@ class AuthorizationFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         binding.btnToGoRegistrationFragment.gone()
         binding.tvShowInfoAuthorization.gone()
         //Принять и отобразить данные
