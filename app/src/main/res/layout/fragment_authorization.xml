@@ -46,7 +46,7 @@
                 android:layout_marginBottom="20dp"/>
 
             <TextView
-                android:id="@+id/tvShowInfo"
+                android:id="@+id/tvShowInfoAuthorization"
                 android:layout_width="@dimen/widthButton"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"

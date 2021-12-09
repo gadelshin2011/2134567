@@ -20,7 +20,7 @@
             >
 
             <EditText
-                android:id="@+id/twLoginRegistration"
+                android:id="@+id/tvLoginRegistration"
                 android:layout_width="@dimen/widthButton"
                 android:layout_height="@dimen/heightButton"
                 android:hint="Login"
@@ -30,12 +30,19 @@
                 />
 
             <EditText
-                android:id="@+id/twPasswordRegistration"
+                android:id="@+id/tvPasswordRegistration"
                 android:layout_width="@dimen/widthButton"
                 android:layout_height="@dimen/heightButton"
                 android:hint="Password"
                 android:inputType="textPassword"
                 android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:id="@+id/tvShowInfoRegistration"
+                android:layout_width="@dimen/widthButton"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/red"  />
 
             <Button
                 android:id="@+id/btnRegistrationUser"

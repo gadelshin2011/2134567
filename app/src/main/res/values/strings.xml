@@ -7,6 +7,7 @@
 
     <string name="login">admin</string>
     <string name="password">admin</string>
-    <string name="errorInfo">Пожалуйста проверьте данные или зарегистрируйтесь</string>
+    <string name="errorInfo">Пожалуйста, проверьте данные или зарегистрируйтесь</string>
+    <string name="errorInfoRegistration">Пожалуйста, заполните поля</string>
 
 </resources>

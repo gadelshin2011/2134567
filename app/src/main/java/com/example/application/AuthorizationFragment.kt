@@ -5,9 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
+import android.widget.EditText
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.LifecycleOwner
 import com.example.application.databinding.FragmentAuthorizationBinding
+import com.example.application.helper.gone
+import com.example.application.helper.show
 
 
 class AuthorizationFragment : Fragment() {
@@ -28,7 +33,7 @@ class AuthorizationFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.btnToGoRegistrationFragment.gone()
-        binding.tvShowInfo.gone()
+        binding.tvShowInfoAuthorization.gone()
         //Принять и отобразить данные
         acceptData()
         // Выполнить действия кнопок
@@ -74,33 +79,27 @@ class AuthorizationFragment : Fragment() {
         UserLogin = binding.tvLogin.text.toString()
         UserPassword = binding.tvPassword.text.toString()
     }
+
     //Принять информацию с другого фрагмента и отобразить в Edit text
-    private fun acceptData(){
-        dataModel.messageLogin.observe(activity as LifecycleOwner, {
+    private fun acceptData() {
+        dataModel.messageLogin.observe(viewLifecycleOwner, {
             binding.tvLogin.setText(it)
         })
-        dataModel.messagePassword.observe(activity as LifecycleOwner, {
+        dataModel.messagePassword.observe(viewLifecycleOwner, {
             binding.tvPassword.setText(it)
         })
     }
 
-    private fun falseData(){
-        binding.tvShowInfo.show()
-        binding.tvShowInfo.text = getText(R.string.errorInfo)
+    private fun falseData() {
+        binding.tvShowInfoAuthorization.show()
+        binding.tvShowInfoAuthorization.text = getText(R.string.errorInfo)
     }
 
-
-    private fun View.show() {
-        this.visibility = View.VISIBLE
-    }
-
-    private fun View.gone() {
-        this.visibility = View.GONE
-    }
 
     companion object {
         @JvmStatic
         fun newInstance() = AuthorizationFragment()
 
     }
+
 }
